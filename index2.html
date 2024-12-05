@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- 
+    
+arr = [
+     { book: 'Catcher in the Rye', readStatus: true, percent: 40},
+     { book: 'Animal Farm', readStatus: true, percent: 20},
+     { book: 'Solaris', readStatus: false, percent: 90 },
+     { book: 'The Fall', readStatus: true, percent: 50 },
+     { book: 'White Nights', readStatus: false, percent: 60 } ,
+     { book: 'After Dark', readStatus: true, percent: 70 }
+ ]
+     grel function  vor@ stana ays array@ u kveradarcni nor array vortex kcucadrvi menak ayn objectner@
+     voronq readStatus@  = true, ev grel function vor@ ayn ksortvaori achman kargov kaxvac persenti valuic:
+
+
+ -->
+    <script>
+      const sortReadBooks = (books) => {
+        return books
+          .filter((book) => book.readStatus)
+          .sort((a, b) => a.percent - b.percent);
+      };
+
+      const books = [
+        { book: "Catcher in the Rye", readStatus: true, percent: 40 },
+        { book: "Animal Farm", readStatus: true, percent: 20 },
+        { book: "Solaris", readStatus: false, percent: 90 },
+        { book: "The Fall", readStatus: true, percent: 50 },
+        { book: "White Nights", readStatus: false, percent: 60 },
+        { book: "After Dark", readStatus: true, percent: 70 },
+      ];
+
+      console.log(sortReadBooks(books));
+    </script>
+  </body>
+</html>

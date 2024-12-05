@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- 5)
+//grel function vor@ kstana array u  kveradarcni arrayi  mijakayqum exac tveri gumar@
+function sumAll(arr) {   
+}
+
+sumAll([1, 4]); //10
+sumAll([4, 1]); //10
+sumAll([5, 10]); //45 -->
+    <script>
+      function sumAll(array) {
+        let max = Math.max(...array);
+        let min = Math.min(...array);
+        for (let i = min; i < max; i++) {
+          if (!array.includes(i)) {
+            array.push(i);
+          }
+        }
+        return array.reduce((a, b) => a + b, 0);
+      }
+      console.log(sumAll([1, 4]));
+      console.log(sumAll([4, 1]));
+      console.log(sumAll([5, 10]));
+    </script>
+  </body>
+</html>
